@@ -1,0 +1,70 @@
+<div class="container-fluid table-scroll">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <span class="listheading">List of Recipes</span>
+  
+        <input
+          class="form-control form-control-sm search-input"
+          [(ngModel)]="search"
+          (ngModelChange)="onInputChange()"
+          type="text"
+          placeholder="Search for recipes"
+        />
+      </div>
+      <div class="card-body">
+        <div class="table-container">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Ingredients</th>
+                <th>Instructions</th>
+                <th>Cuisine</th>
+                <th>Calories</th>
+                <th>Difficulty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let recipe of recipeList">
+                <td>
+                  <b>{{ recipe.name }}</b>
+                </td>
+                <td>{{ recipe.ingredients }}</td>
+                <td>{{ recipe.instructions }}</td>
+                <td>{{ recipe.cuisine }}</td>
+                <td>{{ recipe.caloriesPerServing }}</td>
+                <td>{{ recipe.difficulty }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <nav aria-label="Page navigation example" *ngIf="!search">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a
+                    class="page-link"
+                    [ngClass]="currentPage === 1 ? 'disablepage' : ''"
+                    (click)="onPrev()"
+                    aria-label="Previous"
+                  >
+                    Prev &nbsp;<span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a
+                    class="page-link"
+                    [ngClass]="currentPage === totalPage ? 'disablepage' : ''"
+                    (click)="onNext()"
+                    aria-label="Next"
+                  >
+                    Next &nbsp;<span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

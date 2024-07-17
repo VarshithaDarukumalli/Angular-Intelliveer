@@ -1,0 +1,17 @@
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa; /* Adjust background color as needed */
+    padding: 10px 0; /* Adjust padding as needed */
+    color: #343a40; /* Adjust text color as needed */
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  
+  .sticky-footer .container {
+    text-align: center; /* Center-align content inside the footer */
+  }
+  
+  .sticky-footer .copyright {
+    display: inline-block; /* Ensures span content is centered */
+  }

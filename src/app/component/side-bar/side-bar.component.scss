@@ -1,0 +1,40 @@
+.sidebar {
+    width: 160px;
+    height: 90%;
+    position: fixed; /* Keeps the sidebar fixed during scroll */
+    top: 0; /* Aligns sidebar to the top of the viewport */
+    left: 0; /* Aligns sidebar to the left side of the viewport */
+    background-color: rgb(249, 198, 198);
+    padding-top: 20px; /* Adjust padding as needed */
+  }
+  
+  .sidebar-nav {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-brand {
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 80px;
+    height: 65px;
+    border-radius: 20%;
+  }
+  
+  .nav-link {
+    color: black;
+    font-size: 25px;
+    padding-left: 20px; /* Adjust indentation from the left */
+    padding-top: 10px; /* Adjust padding from the top */
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Change background color on hover */
+  }
+  

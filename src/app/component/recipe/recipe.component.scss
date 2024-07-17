@@ -1,0 +1,92 @@
+.user-icon{
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+}
+
+.table-scroll{
+    height: calc(100vh - 175px);
+    overflow-y: auto;
+}
+
+.search-input{
+    max-width: 400px;
+    margin-left: 65%;
+    display: flex;
+    position: relative;
+    bottom: 10px;}
+
+.disablepage{
+    pointer-events: none;
+    color: aliceblue;
+}
+
+.listheading{
+    color: blue;
+    font-size: 20px;
+    top: 20px;
+    left: 200px;
+    position: relative;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.table-container {
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    left: 165px;
+    overflow-x: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow-x: hidden;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.styled-table thead tr {
+    background-color: rgb(222 179 179);
+    color: black;
+    text-align: left;
+    font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+.table-scroll{
+    overflow-x: hidden;
+
+}

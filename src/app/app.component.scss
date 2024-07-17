@@ -1,0 +1,22 @@
+#wrapper {
+    display: flex;
+    min-height: 100vh; 
+    overflow-x: hidden; 
+  }
+  
+  #content-wrapper {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #content {
+    flex: 1; 
+    overflow-y: auto; 
+  }
+  
+ 
+  app-footer {
+    margin-top: auto; 
+  }
+  

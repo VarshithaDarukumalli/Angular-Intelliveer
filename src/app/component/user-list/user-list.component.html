@@ -1,0 +1,75 @@
+<div class="container-fluid table-scroll">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <span class="listheading">List of Users</span>
+        <input
+          class="form-control form-control-sm search-input"
+          [(ngModel)]="search"
+          (ngModelChange)="onInputChange()"
+          type="text"
+          placeholder="Search for users"
+        />
+      </div>
+      <div class="card-body">
+        <div class="table-container">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Date of Birth</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Country</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of userList">
+                <td>
+                  <b>{{ user.firstName }} {{ user.lastName }}</b>
+                </td>
+                <td>{{ user.company.title }}</td>
+                <td>{{ user.birthDate | date : "dd/MM/yyyy" }}</td>
+                <td>
+                  <a href="tel:{{ user.phone }}">{{ user.phone }}</a>
+                </td>
+                <td>
+                  <a href="mailto:{{ user.email }}">{{ user.email }}</a>
+                </td>
+                <td>{{ user.address.country }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+            <nav aria-label="Page navigation example" *ngIf="!search">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a
+                    class="page-link"
+                    [ngClass]="currentPage === 1 ? 'disablepage' : ''"
+                    href="#"
+                    (click)="onPrev()"
+                    aria-label="Previous"
+                  >
+                    Prev &nbsp;<span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item">
+                  <a
+                    class="page-link"
+                    href="#"
+                    [ngClass]="currentPage === totalPage ? 'disablepage' : ''"
+                    (click)="onNext()"
+                    aria-label="Next"
+                  >
+                    Next &nbsp;<span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
