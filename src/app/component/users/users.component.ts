@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../service/user.service';
+import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'app-user-list',
-  templateUrl: './user-list.component.html',
-  styleUrls: ['./user-list.component.scss'],
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss'],
 })
-export class UserListComponent implements OnInit {
+export class UsersComponent implements OnInit {
   skip = 0;
   limit = 10;
   currentPage = 1;
@@ -15,7 +15,7 @@ export class UserListComponent implements OnInit {
   search = '';
   showPage = true;
 
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly dataService: DataService) {}
 
   ngOnInit(): void {
     this.onPageChange();
@@ -23,7 +23,7 @@ export class UserListComponent implements OnInit {
 
   onPageChange() {
     console.log(this.skip, this.limit)
-    this.userService
+    this.dataService
       .getAllUsers(this.skip, this.limit)
       .subscribe((response: any) => {
         this.userList = response.users;
@@ -35,7 +35,7 @@ export class UserListComponent implements OnInit {
     const text = this.search.trim();
     if (text) {
       this.showPage = false;
-      this.userService.searchUser(text).subscribe((response: any) => {
+      this.dataService.searchUser(text).subscribe((response: any) => {
         this.userList = response.users;
       });
     } else {

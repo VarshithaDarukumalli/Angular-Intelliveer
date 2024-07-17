@@ -20,3 +20,81 @@
     margin-top: auto; 
   }
   
+
+
+
+
+
+  .sidebar {
+    width: 160px;
+    height: 90%;
+    position: fixed; /* Keeps the sidebar fixed during scroll */
+    top: 0; /* Aligns sidebar to the top of the viewport */
+    left: 0; /* Aligns sidebar to the left side of the viewport */
+    background-color: rgb(249, 198, 198);
+    padding-top: 20px; /* Adjust padding as needed */
+  }
+  
+  .sidebar-nav {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-brand {
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 59px;
+    height: 54px;
+    left: 40px;
+    position: relative;
+    bottom: 10px;
+    border-radius: 20%;
+    margin-bottom: -27px;
+    margin-top: -12px;
+  }
+  
+  .nav-link {
+    color: black;
+    font-size: 25px;
+    padding-left: 20px; /* Adjust indentation from the left */
+    padding-top: 10px; /* Adjust padding from the top */
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Change background color on hover */
+  }
+  
+  .mainHeader{
+    color: black;
+    font-size: 24px;
+    padding-left: 35%;
+    background-color: rgb(249, 198, 198);
+    padding-right: 40%;
+    position: relative;
+    left: 152px;
+    height: 60px;
+}
+
+.sticky-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Adjust background color as needed */
+  padding: 10px 0; /* Adjust padding as needed */
+  color: #343a40; /* Adjust text color as needed */
+  font-size: 14px; /* Adjust font size as needed */
+}
+
+.sticky-footer .container {
+  text-align: center; /* Center-align content inside the footer */
+}
+
+.sticky-footer .copyright {
+  display: inline-block; /* Ensures span content is centered */
+}

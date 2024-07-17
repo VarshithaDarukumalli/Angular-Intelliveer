@@ -1,24 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SideBarComponent } from './component/side-bar/side-bar.component';
-import { HeaderComponent } from './component/header/header.component';
-import { FooterComponent } from './component/footer/footer.component';
-import { UserListComponent } from './component/user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecipeComponent } from './component/recipe/recipe.component';
-import { UserService } from './service/user.service';
+import { DataService } from './services/data.service';
+import { UsersComponent } from './component/users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideBarComponent,
-    HeaderComponent,
-    FooterComponent,
-    UserListComponent,
+    UsersComponent,
     RecipeComponent
   ],
   imports: [
@@ -28,7 +21,7 @@ import { UserService } from './service/user.service';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

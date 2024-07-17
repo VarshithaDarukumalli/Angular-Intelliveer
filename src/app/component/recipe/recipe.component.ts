@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../service/user.service';
+import { DataService } from '../../services/data.service';
 @Component({
   selector: 'app-recipe',
   templateUrl: './recipe.component.html',
@@ -15,7 +15,7 @@ export class RecipeComponent implements OnInit{
   showPage = true;
   
 
-  constructor(private readonly userService:UserService){}
+  constructor(private dataService:DataService){}
 
   ngOnInit():void{
     this.onPageChange();
@@ -25,7 +25,7 @@ export class RecipeComponent implements OnInit{
 
     console.log(this.skip, this.limit)
 
-    this.userService.getAllRecipes(this.skip,this.limit).subscribe((response:any)=>{
+    this.dataService.getAllRecipes(this.skip,this.limit).subscribe((response:any)=>{
       console.log(this,response)
       this.recipeList = response.recipes;
       console.log(this.recipeList)
@@ -38,7 +38,7 @@ export class RecipeComponent implements OnInit{
     const text = this.search.trim();
     if(text){
       this.showPage = false;
-      this.userService.searchRecipe(text).subscribe((response:any)=>{
+      this.dataService.searchRecipe(text).subscribe((response:any)=>{
         this.recipeList = response.recipes;
       })
     }else{

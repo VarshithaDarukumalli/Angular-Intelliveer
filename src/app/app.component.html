@@ -1,4 +1,4 @@
-<div id="wrapper">
+<!-- <div id="wrapper">
   <app-side-bar></app-side-bar>
   <div id="content-wrapper" class="d-flex flex-column">
     <div id="content">
@@ -7,4 +7,41 @@
     </div>
     <app-footer></app-footer>
   </div>
+</div> -->
+
+
+<div id="wrapper">
+  <div class="sidebar">
+    <ul class="navbar-nav sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#" class="d-flex align-items-center justify-content-center">
+          <img class="logo" src="assets/logo.png" alt="Logo">
+        </a>
+      </li>
+      <hr class="sidebar-divider my-0">
+    
+      <li>
+        <a routerLink="/users" class="nav-link userText">Users</a>
+      </li>
+      <li>
+        <a routerLink="/recipes" class="nav-link recipeText">Recipes</a>
+      </li>
+    </ul>
+  </div>
+    <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <nav
+      class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+    >
+      <div class="mainHeader"><span>Welcome to Intelliveer</span></div>
+    </nav>
+          <router-outlet></router-outlet>
+    </div>
+    <footer class="sticky-footer bg-gray">
+      <div class="container text-center">
+          <div class="copyright">
+              <span>Privacy Policy &nbsp; | &nbsp; SiteMap &nbsp; | &nbsp; Intelliveer 2024 &copy;</span>
+          </div>
+      </div>
+  </footer>  </div>
 </div>
